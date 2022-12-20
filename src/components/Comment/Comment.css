@@ -1,0 +1,20 @@
+.comment-container {
+    padding: 15px 0;
+    height: auto;
+}
+
+.user-data {
+    display: flex;
+    max-width: 100%;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.post-time {
+    padding-left: 5px;
+}
+
+.username {
+    font-weight: bold;
+    padding: 0 10px 0 0;
+}

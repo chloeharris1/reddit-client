@@ -24,6 +24,10 @@ I used the GitHub project management tool, GitHub projects, to plan my work.
 ![image](./public/wireframe_modalView.png)
 ![image](./public/wireframe_searchError.png)
 
+## Credits
+
+Favicon from [flaticon](https://www.flaticon.com/authors/najmunnahar)
+
 ## License
 
 Licensed under the MIT license.
