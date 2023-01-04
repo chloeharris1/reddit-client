@@ -5,9 +5,9 @@ import { fetchSubredditPosts } from "../../api/reddit";
 export const loadAllPosts = createAsyncThunk(
   "postPreviews/loadAllPosts",
   async () => {
-    const data = await fetchSubredditPosts("popular");
-    const json = await data.json();
-    return json;
+    const response = await fetchSubredditPosts("all");
+    const data = await response;
+    return data;
   }
 );
 
