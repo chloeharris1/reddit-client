@@ -8,12 +8,12 @@ const SideNav = () => {
       <nav className="navbar-menu">
         <h1 className="navbar-title">Subreddits</h1>
         {/* Map over subreddits to create list */}
-        <div className="nav-list">
-          <span>r/all</span>
-          <span>r/sandiego</span>
-          <span>r/losangeles</span>
-          <span>r/seattle</span>
-        </div>
+        <ul className="nav-list">
+          <li>r/all</li>
+          <li>r/sandiego</li>
+          <li>r/losangeles</li>
+          <li>r/seattle</li>
+        </ul>
       </nav>
     </div>
   );

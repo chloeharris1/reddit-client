@@ -6,9 +6,9 @@ import "./Comment.css";
 const Comment = () => {
   return (
     <div className="comment-container">
-      <div className="user-data">
-        <span className="username">Dayman_2022</span> |
-        <span className="post-time">10 hours ago</span>
+      <div className="comment-data">
+        <p className="comment-author">Dayman_2022</p> |
+        <p className="comment-created-time">10 hours ago</p>
       </div>
       <p>
         Diam sit amet nisl suscipit adipiscing bibendum. Felis donec et odio

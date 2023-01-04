@@ -1,5 +1,6 @@
 import React from "react";
 // Full post modal w/ comments
+// import commentsList file
 
 import CommentsList from "./CommentList/CommentList";
 

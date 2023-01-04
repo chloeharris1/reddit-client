@@ -35,7 +35,7 @@
     margin-top: 42px;
 }
 
-.nav-list>span {
+.nav-list>li {
     cursor: pointer;
     padding: 15px 20px;
 }

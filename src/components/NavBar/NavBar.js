@@ -9,7 +9,7 @@ const NavBar = () => {
         <li>
           <i className="fa-brands fa-reddit fa-2xl"></i>
         </li>
-        <li className="reddit">reddit</li>
+        <li className="reddit">exploreddit</li>
       </ul>
       <SearchBar />
     </nav>

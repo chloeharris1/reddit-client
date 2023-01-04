@@ -1,5 +1,6 @@
 import "./App.css";
-import React from "react";
+// import React from "react";
+// import { Routes, Route } from "react-router-dom";
 
 // components
 import NavBar from "../components/NavBar/NavBar";
@@ -11,7 +12,9 @@ export default function App() {
     <div className="App">
       <NavBar />
       <SideNav />
-      <PostPreviews />
+      <main>
+        <PostPreviews />
+      </main>
     </div>
   );
 }

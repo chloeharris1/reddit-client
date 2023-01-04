@@ -83,3 +83,9 @@ main {
 .comment-count>i {
     margin-right: 7px;
 }
+
+.loading {
+    margin-top: 20%;
+    font-size: 2rem;
+    color: white;
+}
