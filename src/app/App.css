@@ -102,3 +102,8 @@ main {
 .post-image img {
     width: 100%;
 }
+
+.post-preview {
+    display: flex;
+    justify-content: center;
+}
