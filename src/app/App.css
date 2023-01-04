@@ -44,7 +44,7 @@ main {
     border-radius: 5px;
     border: 1px solid #858181;
     margin-top: 20px;
-    padding: 15px 10px;
+    padding: 15px 20px 10px 15px;
 }
 
 .vote-panel {
@@ -88,4 +88,17 @@ main {
     margin-top: 20%;
     font-size: 2rem;
     color: white;
+}
+
+.post-details {
+    cursor: pointer;
+}
+
+.post-image {
+    display: flex;
+    justify-content: center;
+}
+
+.post-image img {
+    width: 100%;
 }
