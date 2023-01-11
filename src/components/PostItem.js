@@ -1,6 +1,7 @@
 import moment from "moment";
 
-const Post = ({ post }) => {
+// Post content preview
+const PostItem = ({ post }) => {
   let content;
 
   if (post.post_hint === "image") {
@@ -54,4 +55,4 @@ const Post = ({ post }) => {
   );
 };
 
-export default Post;
+export default PostItem;

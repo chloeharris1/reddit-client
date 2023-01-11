@@ -18,6 +18,10 @@ I used the GitHub project management tool, GitHub projects, to plan my work.
 
 ![image](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 
+Marked React NPM - Used to convert post comments in markdown into html
+
+https://www.npmjs.com/package/marked-react
+
 ## Wireframes
 
 ![image](./public/wireframe_frontPage.png)
