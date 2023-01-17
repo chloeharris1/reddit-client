@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import PostItem from "../../components/PostItem";
+import PostPreview from "../../components/PostPreview/PostPreview";
 import {
-  loadSearchResults,
+  getSearchResults,
   isLoading,
   selectResults,
   hasError,
@@ -10,19 +10,19 @@ import {
 import { useSearchParams } from "react-router-dom";
 
 const Search = () => {
-  const dispatch = useDispatch();
   const searchResults = useSelector(selectResults);
   const isLoadingResults = useSelector(isLoading);
-  //   const error = useSelector(hasError);
+  const error = useSelector(hasError);
+  const dispatch = useDispatch();
   // hook used to read and modify the query string in the URL for the current location
   let [searchParams] = useSearchParams();
   let term = searchParams.get("q");
 
   useEffect(() => {
-    dispatch(loadSearchResults(term));
+    dispatch(getSearchResults(term));
   }, [dispatch, term]);
 
-  return hasError ? (
+  return error ? (
     <p className="search-error">
       Hm... we couldn't find any results for {term}
     </p>
@@ -32,7 +32,7 @@ const Search = () => {
         <span className="loading">Loading...</span>
       ) : (
         searchResults.map((post) => {
-          return <PostItem key={post.id} post={post} />;
+          return <PostPreview key={post.id} post={post} />;
         })
       )}
     </div>

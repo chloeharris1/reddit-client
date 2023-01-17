@@ -1,10 +1,6 @@
 import React from "react";
-import "./SearchBar.css";
-import {
-  setTerm,
-  clearTerm,
-  selectTerm,
-} from "../../features/search/searchSlice";
+
+import { setTerm, clearTerm, selectTerm } from "./searchSlice";
 import { useNavigate, createSearchParams, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";

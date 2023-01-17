@@ -1,34 +1,36 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchSubreddits } from "../../api/reddit";
+// import { fetchSubreddits } from "../../api/reddit";
 
 // Redux thunk that gets subreddits
-export const loadSubreddits = createAsyncThunk(
-  "subreddits/loadSubreddits",
+export const getSubreddits = createAsyncThunk(
+  "subreddits/getSubreddits",
   async () => {
-    const response = await fetchSubreddits();
-    const data = await response;
-    return data;
+    const response = await fetch("https://www.reddit.com/subreddits.json");
+    const json = await response.json();
+    return json.data.children.map((subreddit) => subreddit.data);
   }
 );
 
+const initialState = {
+  subreddits: [],
+  isLoadingSubreddits: false,
+  hasError: false,
+};
+
 export const subredditsSlice = createSlice({
   name: "subreddits",
-  initialState: {
-    subreddits: [],
-    isLoadingSubreddits: false,
-    hasError: false,
-  },
+  initialState,
   extraReducers: (builder) => {
     builder
-      .addCase(loadSubreddits.pending, (state) => {
+      .addCase(getSubreddits.pending, (state) => {
         state.isLoadingSubreddits = true;
         state.hasError = false;
       })
-      .addCase(loadSubreddits.fulfilled, (state, action) => {
+      .addCase(getSubreddits.fulfilled, (state, action) => {
         state.isLoadingSubreddits = false;
         state.subreddits = action.payload;
       })
-      .addCase(loadSubreddits.rejected, (state, action) => {
+      .addCase(getSubreddits.rejected, (state, action) => {
         state.isLoadingSubreddits = false;
         state.hasError = true;
         state.subreddits = [];

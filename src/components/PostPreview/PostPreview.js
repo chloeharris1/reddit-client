@@ -1,8 +1,10 @@
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 // Post content preview
-const PostItem = ({ post }) => {
+const PostPreview = ({ post }) => {
   let content;
+  // console.log(post);
 
   if (post.post_hint === "image") {
     content = (
@@ -11,8 +13,10 @@ const PostItem = ({ post }) => {
       </div>
     );
   } else {
+    // console.log(post.post_hint);
     // rel='noreferrer is a privacy enhancement for when you want to hide from the owner of the linked domain that the user came from your website.
     // source: https://stackoverflow.com/questions/50773152/when-should-i-use-rel-noreferrer
+    // console.log(post.post_hint);
     content =
       post.thumbnail && post.thumbnail !== "default" ? (
         <a href={post.url} target="_blank" rel="noreferrer">
@@ -29,6 +33,12 @@ const PostItem = ({ post }) => {
         </a>
       );
   }
+
+  let previewClass =
+    post.post_hint !== "image" && post.thumbnail && post.thumbnail !== "default"
+      ? "thumbnail-post"
+      : "";
+
   return (
     <div className="post-container">
       <div className="vote-panel">
@@ -38,21 +48,30 @@ const PostItem = ({ post }) => {
       </div>
       <div className="post-body">
         <span className="post-details">
-          {post.subreddit_name_prefixed} | posted by {post.author} |{" "}
-          {moment.unix(post.created_utc).fromNow()}
+          <Link className="subreddit-link" to={`/${post.subreddit}`}>
+            {post.subreddit_name_prefixed}
+          </Link>
+          | posted by {post.author} | {moment.unix(post.created_utc).fromNow()}
         </span>
-        <h1 className="post-header">{post.title}</h1>
-        <div className="post-preview">{content}</div>
-        <div className="comment-count">
+        <div className={previewClass}>
+          <Link to={`/${post.subreddit}/${post.id}`}>
+            <h2 className="post-header">{post.title}</h2>
+          </Link>
+          <div className="post-preview">{post.is_self || content}</div>
+        </div>
+        <Link
+          className="comment-count"
+          to={`/${post.subreddit}/${post.id}#comments`}
+        >
           <i className="fa-regular fa-comment fa-xl"></i>
           <span>
             {post.num_comments}{" "}
             {post.num_comments === 1 ? "Comment" : "Comments"}
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default PostItem;
+export default PostPreview;

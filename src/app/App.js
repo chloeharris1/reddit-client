@@ -1,25 +1,24 @@
 import "./App.css";
-// import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 // components
-import NavBar from "../components/NavBar/NavBar";
-import SideNav from "../components/SideNav/SideNav";
-import PostPreviews from "../features/postPreviews/PostPreviews";
-// import CurrentPost from "../features/currentPost/CurrentPost";
-// import FullPost from "../components/FullPost";
+import Header from "../components/Header/Header";
+import SideNav from "../features/sideNav/SideNav";
+import PostsList from "../features/posts/PostsList";
 import Search from "../features/search/Search";
+import SelectedPost from "../features/posts/SelectedPost";
 
 export default function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Header />
       <SideNav />
       <main>
         <Routes>
-          <Route path="/" element={<PostPreviews />} />
+          <Route path="/" element={<PostsList />} />
           <Route path="/search" element={<Search />} />
-          {/* <FullPost /> */}
+          <Route path="/:subreddit" element={<PostsList />} />
+          <Route path="/:subreddit/:postId" element={<SelectedPost />} />
         </Routes>
       </main>
     </div>

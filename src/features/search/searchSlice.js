@@ -1,27 +1,30 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // import { fetchResults } from "../../api/reddit";
 
-export const loadSearchResults = createAsyncThunk(
-  "search/loadSearchResults",
+export const getSearchResults = createAsyncThunk(
+  "search/getSearchResults",
   async (term) => {
     const response = await fetch(
       `https://www.reddit.com/search.json?q=${term}`
     );
+    // console.log(response);
     const json = await response.json();
+    // console.log(json);
     return json.data.children.map((post) => post.data);
   }
 );
 
+const initialState = {
+  term: "",
+  results: [],
+  isLoadingResults: false,
+  hasError: false,
+};
+
 export const searchSlice = createSlice({
   name: "search",
-  initialState: {
-    term: "",
-    results: [],
-    isLoadingResults: false,
-    hasError: false,
-  },
+  initialState,
   reducers: {
-    // Add these into extraReducers?
     setTerm: (state, action) => {
       state.term = action.payload;
     },
@@ -29,17 +32,20 @@ export const searchSlice = createSlice({
       state.term = "";
     },
   },
+  // extra reducers: accepts a builder parameter, which is an object that let's us
+  // define additional case reducers that run in response to the actions defined
+  // outside of the slice
   extraReducers: (builder) => {
     builder
-      .addCase(loadSearchResults.pending, (state) => {
+      .addCase(getSearchResults.pending, (state) => {
         state.isLoadingResults = true;
         state.hasError = false;
       })
-      .addCase(loadSearchResults.fulfilled, (state, action) => {
+      .addCase(getSearchResults.fulfilled, (state, action) => {
         state.isLoadingResults = false;
         state.results = action.payload;
       })
-      .addCase(loadSearchResults.rejected, (state, action) => {
+      .addCase(getSearchResults.rejected, (state, action) => {
         state.isLoadingResults = false;
         state.hasError = true;
         state.results = [];
