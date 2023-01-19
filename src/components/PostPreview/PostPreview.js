@@ -1,5 +1,6 @@
 import moment from "moment";
 import { Link } from "react-router-dom";
+import "./PostPreview.css";
 
 // Post content preview
 const PostPreview = ({ post }) => {
@@ -41,11 +42,6 @@ const PostPreview = ({ post }) => {
 
   return (
     <div className="post-container">
-      <div className="vote-panel">
-        <i className="fa-sharp fa-solid fa-angle-up fa-xl"></i>
-        {post.score}
-        <i className="fa-sharp fa-solid fa-angle-down fa-xl"></i>
-      </div>
       <div className="post-body">
         <span className="post-details">
           <Link className="subreddit-link" to={`/${post.subreddit}`}>
@@ -59,17 +55,21 @@ const PostPreview = ({ post }) => {
           </Link>
           <div className="post-preview">{post.is_self || content}</div>
         </div>
-        <Link
-          className="comment-count"
-          to={`/${post.subreddit}/${post.id}#comments`}
-        >
-          <i className="fa-regular fa-comment fa-xl"></i>
-          <span>
-            {post.num_comments}{" "}
-            {post.num_comments === 1 ? "Comment" : "Comments"}
-          </span>
-        </Link>
+        <div className="vote-panel">
+          <i className="fa-sharp fa-solid fa-angle-up fa-xl"></i>
+          {post.score}
+          <i className="fa-sharp fa-solid fa-angle-down fa-xl"></i>
+        </div>
       </div>
+      <Link
+        className="comment-count"
+        to={`/${post.subreddit}/${post.id}#comments`}
+      >
+        <i className="fa-regular fa-comment fa-xl"></i>
+        <span>
+          {post.num_comments} {post.num_comments === 1 ? "Comment" : "Comments"}
+        </span>
+      </Link>
     </div>
   );
 };

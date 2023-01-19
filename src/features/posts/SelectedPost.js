@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchPost } from "../../api/reddit";
 import FullPost from "../../components/FullPost/FullPost";
 import Comment from "../../components/Comment/Comment";
+import "../../app/App.css";
 
 const SelectedPost = () => {
   let { postId } = useParams();

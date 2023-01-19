@@ -32,8 +32,8 @@ const SearchBar = () => {
   return (
     <div className="search-container">
       <div className="search-bar">
-        <form className="inner-content" onSubmit={viewSearchResults}>
-          <i className="fa-solid fa-magnifying-glass"></i>
+        <form onSubmit={viewSearchResults}>
+          <i className="fa-solid fa-magnifying-glass fa-lg"></i>
           <input
             id="search-input"
             value={term}
