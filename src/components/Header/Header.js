@@ -4,19 +4,20 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <nav className="header">
-      <ul className="home">
+    <header className="header">
+      <nav className="nav">
         <Link to="/">
-          <li className="reddit">exploreddit</li>
+          <i className="fa-brands fa-reddit-alien fa-2xl header-icon"></i>
         </Link>
-        <li>
-          <Link to="/">
-            <i className="fa-brands fa-reddit-alien fa-2xl"></i>
-          </Link>
-        </li>
-      </ul>
+        <Link to="/">
+          <h1 className="reddit">exploreddit</h1>
+        </Link>
+      </nav>
+      <button className="dropdown">
+        <i className="fa-sharp fa-solid fa-angle-down fa-xl header-icon dropdown"></i>
+      </button>
       <SearchBar />
-    </nav>
+    </header>
   );
 };
 

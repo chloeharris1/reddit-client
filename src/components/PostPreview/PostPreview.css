@@ -1,80 +1,40 @@
-.post-container {
+/* .post-container {
     display: flex;
+    flex-direction: row;
+    position: relative;
     width: 100%;
     height: auto;
-    background: linear-gradient( to bottom right, #03d17b 0%, 10.780609011650085%, #084148 39.56121802330017%, 59.97876822948456%, #0d1c47 80.39631843566895%, 90.19815921783447%, #301f6f 100%);
-    background-blend-mode: lighten;
     color: #f9f9f9;
     font-size: 14px;
-    border-radius: 5px;
     margin-top: 20px;
-    padding: 20px;
-}
-
-
-/* .vote-panel {
-    max-width: 17%;
-    height: 100%;
-    padding-right: 10px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: #18181a;
-}
- */
-
-
-/* .vote-panel>i {
-    margin: 10px 0;
-}
-
-.post-body {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    text-align: left;
-}
-
-.post-details {
-    align-self: flex-start;
-}
-
-.post-header {
-    margin: 10px 0 15px 0;
-}
-
-.comment-count {
-    margin: 15px 0;
-}
-
-.comment-count>i {
-    margin-right: 7px;
-}
-
-.loading {
-    margin-top: 20%;
-    font-size: 2rem;
-    color: white;
-}
-
-.post-details {
-    cursor: pointer;
-}
-
-.post-image {
-    display: flex;
-    justify-content: center;
-}
-
-.post-image img {
-    width: 100%;
-}
-
-.post-preview {
-    display: flex;
-    justify-content: center;
+    padding: 20px 85px 20px 25px;
+    background: #101029;
 } */
 
+
+/* .post-body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( to bottom, #1d3456 0%, 9.649122506380081%, #132745 19.298245012760162%, 41.5204681456089%, #101d37 63.74269127845764%, 67.34892725944519%, #0c132b 70.95516324043274%, 85.47758162021637%, #090d1b 100%);
+}
+
+.vote-panel {
+    top: 20;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #706e6f;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 12px;
+    height: 40%;
+    width: 9%;
+}
+
 .post-image img {
     width: 100%;
-}
+} */

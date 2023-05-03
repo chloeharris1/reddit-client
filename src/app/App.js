@@ -12,7 +12,6 @@ export default function App() {
   return (
     <div className="App">
       <Header />
-      <SideNav />
       <main>
         <Routes>
           <Route path="/" element={<PostsList />} />
@@ -21,6 +20,7 @@ export default function App() {
           <Route path="/:subreddit/:postId" element={<SelectedPost />} />
         </Routes>
       </main>
+      <SideNav />
     </div>
   );
 }

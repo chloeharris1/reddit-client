@@ -30,19 +30,17 @@ const SearchBar = () => {
   }, [location, dispatch]);
 
   return (
-    <div className="search-container">
-      <div className="search-bar">
-        <form onSubmit={viewSearchResults}>
-          <i className="fa-solid fa-magnifying-glass fa-lg"></i>
-          <input
-            id="search-input"
-            value={term}
-            type="search"
-            placeholder="Search"
-            onChange={handleTermChange}
-          />
-        </form>
-      </div>
+    <div className="search">
+      <form onSubmit={viewSearchResults}>
+        <i className="fa-solid fa-magnifying-glass fa-lg"></i>
+        <input
+          id="search-input"
+          value={term}
+          type="search"
+          placeholder="Search"
+          onChange={handleTermChange}
+        />
+      </form>
     </div>
   );
 };

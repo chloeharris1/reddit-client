@@ -1,28 +1,34 @@
-.subreddit-list {
-    /* position: fixed; */
+/* .subreddit-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 25rem;
-    padding: 20px;
-    background: linear-gradient( to bottom right, #03d17b 0%, 10.780609011650085%, #084148 39.56121802330017%, 59.97876822948456%, #0d1c47 80.39631843566895%, 90.19815921783447%, #301f6f 100%);
-    background-blend-mode: overlay;
-    border-radius: 12px;
-    margin-top: 10rem;
+    width: 20rem;
+    padding: 10px;
+    background: #101029;
+    margin-top: 8rem;
     margin-left: 3rem;
     min-height: 60vh;
     letter-spacing: 2px;
-    color: #00e281;
-}
+    color: #fff;
+    border: 1px solid #706e6f;
+    border-top: 7px solid #706e6f;
+} */
 
-@media only screen and (max-width: 960px) {
+
+/* @media only screen and (max-width: 960px) {
     .subreddit-list {
         display: none;
     }
-}
+} */
 
-.subreddit-links {
-    /* position: fixed; */
+
+/* .subreddit-list>h3 {
+    text-decoration-line: overline;
+    padding: 5px;
+} */
+
+
+/* .subreddit-links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -31,6 +37,8 @@
     height: 100%;
     gap: 10px;
     margin-top: 1rem;
+    width: 95%;
+    background: linear-gradient( to bottom, #1d3456 0%, 9.649122506380081%, #132745 19.298245012760162%, 41.5204681456089%, #101d37 63.74269127845764%, 67.34892725944519%, #0c132b 70.95516324043274%, 85.47758162021637%, #090d1b 100%);
 }
 
 .sideNav-title {
@@ -40,21 +48,19 @@
 
 .subreddit-links>li {
     cursor: pointer;
-}
+} */
 
 .subreddit-icon {
     width: 32px;
     border-radius: 50%;
-    margin-right: 10px;
 }
 
 div.subreddit-icon {
     height: 32px;
-    display: inline-flex;
-    align-items: center;
 }
 
-button {
+
+/* button {
     display: flex;
     align-items: center;
     background: transparent;
@@ -63,9 +69,9 @@ button {
     cursor: pointer;
     letter-spacing: 2px;
     font-weight: 500;
-    color: #000;
+    color: #fff;
 }
 
 button:hover {
-    color: #00e281;
-}
+    color: #2dbcff;
+} */

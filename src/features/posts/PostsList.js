@@ -14,6 +14,7 @@ const PostsList = () => {
   useEffect(() => {
     fetchSubredditPosts(subreddit)
       .then((response) => {
+        // console.log(response);
         setPostPreviews(response);
         setIsLoading(false);
       })
@@ -23,7 +24,7 @@ const PostsList = () => {
   }, [subreddit, error]);
 
   return (
-    <>
+    <div className="posts-list">
       {isLoading ? (
         <span className="loading">Loading...</span>
       ) : (
@@ -33,7 +34,7 @@ const PostsList = () => {
           </article>
         ))
       )}
-    </>
+    </div>
   );
 };
 

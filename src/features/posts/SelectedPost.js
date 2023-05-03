@@ -39,7 +39,7 @@ const SelectedPost = () => {
     <span className="loading">Loading...</span>
   ) : (
     <div className="selected-post">
-      <FullPost key={post.id} post={post} />;
+      <FullPost key={post.id} post={post} />
       <div className="comments-list">
         {comments.map((comment) => {
           return <Comment key={comment.id} comment={comment} />;

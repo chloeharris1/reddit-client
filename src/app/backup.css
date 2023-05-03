@@ -1,0 +1,8 @@
+/* @media only screen and (max-width: 960px) {
+    .App {
+        grid-template-areas: "header header header" "main main main";
+    }
+    .side-nav {
+        display: none;
+    }
+} */

@@ -13,9 +13,40 @@ const SideNav = () => {
     dispatch(getSubreddits());
   }, [dispatch]);
 
+  // Array of space-themed subreddit names
+  const spaceSubreddits = [
+    "nasa",
+    "spaceporn",
+    "spaceflight",
+    "space",
+    "astronomy",
+    "cosmology",
+    "futurology",
+    "telescopes",
+    "askastronomy",
+    "spaceexploration",
+    "iss",
+    "space_colonization",
+    "astrophotography",
+    "spaceflightporn",
+    "spacevideos",
+    "esa",
+    "spacex",
+    "moon",
+    "mars",
+    "curiosityrover",
+  ];
+
+  // function checkSubreddit(sub) {
+  //   return sub === spaceSubreddits;
+  // }
+
+  // const filteredSubreddits = subreddits.filter(checkSubreddit);
+  // console.log(filteredSubreddits);
+
   return (
-    <nav className="subreddit-list">
-      <h3 className="sideNav-title">Subreddits</h3>
+    <nav className="side-nav">
+      <h2>Subreddits</h2>
       <ul className="subreddit-links">
         {subreddits.map((subreddit) => {
           return (
@@ -29,7 +60,7 @@ const SideNav = () => {
                   />
                 ) : (
                   <div className="subreddit-icon">
-                    <i class="fa-regular fa-compass fa-2xl"></i>
+                    <i className="fa-regular fa-compass fa-2xl"></i>
                   </div>
                 )}
                 <li key={subreddit.id} subreddit={subreddit}>

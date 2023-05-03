@@ -1,26 +1,26 @@
-.header {
+/* .header {
     display: flex;
+    background: #101029;
+    z-index: 1;
+    border: 1px solid #706e6f;
+    border-top: 7px solid #706e6f;
 }
 
 nav {
     display: flex;
-    /* flex: 0 1 100%; */
+    flex: 0 1 100%;
     position: fixed;
     width: 100%;
-    /* flex-grow: 1; */
 }
 
 .home {
     flex-shrink: 0 1 auto;
     position: absolute;
-    /* max-width: 290px; */
-    /* height: auto; */
     align-items: center;
     padding: 55px 15px 25px 15px;
     margin-left: 3rem;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
-    background: linear-gradient(to bottom right, #03a9dd 0%, 55%, #013846 100%);
 }
 
 .fa-reddit-alien {
@@ -41,18 +41,18 @@ nav>ul {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 3px;
-}
+} */
 
 
 /* SearchBar */
 
-.search-container {
+
+/* .search-container {
     flex: 1 1 auto;
     margin-left: auto;
     margin-right: 10rem;
     max-width: 390px;
     padding: 15px 25px 10px 25px;
-    background: linear-gradient(to bottom right, #03a9dd 0%, 55%, #013846 100%);
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
 }
@@ -62,7 +62,6 @@ input {
     line-height: 14px;
     margin-left: 6px;
     height: 40px;
-    /* flex: 0 1 90%; */
     width: 90%;
     outline: none;
     background: transparent;
@@ -73,4 +72,4 @@ input {
 
 form>i {
     color: #000;
-}
+} */

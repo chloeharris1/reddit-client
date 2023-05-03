@@ -46,10 +46,11 @@ const FullPost = ({ post }) => {
       </div>
       <div className="post-body">
         <span className="post-details">
-          <Link className="subreddit-link" to={`/${post.subreddit}`}>
+          <Link className="post-subreddit" to={`/${post.subreddit}`}>
             {post.subreddit_name_prefixed}
           </Link>
-          | posted by {post.author} | {moment.unix(post.created_utc).fromNow()}
+          <span>posted by {post.author}</span>
+          <span>{moment.unix(post.created_utc).fromNow()}</span>
         </span>
         <div className={`full-post ${previewClass}`}>
           <h1 className="post-header">{post.title}</h1>
